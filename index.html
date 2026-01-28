@@ -3,38 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Journey</title>
+    <title>Our Production Story</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="text-center py-5 bg-light">
+<header class="text-center py-5 bg-light sticky-top shadow-sm">
     <div class="container">
-        <h1 class="display-6 fw-bold">How It's Made</h1>
-        <p class="lead text-muted">From our workshop to your hands.</p>
+        <h1 class="display-6 fw-bold">From Soil to Sack</h1>
+        <p class="lead text-muted">Tap a stage below to see how we do it.</p>
     </div>
 </header>
 
-<div class="container mb-5">
-    <div class="row g-3" id="gallery-root">
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Mixing" class="img-fluid rounded gallery-item" alt="Process 1">
+<div class="container my-4">
+    <div class="accordion" id="processAccordion">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Stage 1: Land Preparation</strong>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo1.jpeg" class="gallery-item img-fluid rounded" alt="Plowed field"><p class="caption">Breaking Ground</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo2.jpeg" class="gallery-item img-fluid rounded" alt="Soil prep"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo3.jpeg" class="gallery-item img-fluid rounded" alt="Field landscape"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo4.jpeg" class="gallery-item img-fluid rounded" alt="Red soil"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo5.jpeg" class="gallery-item img-fluid rounded" alt="Manual labor"><p class="caption">Teamwork</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo6.jpeg" class="gallery-item img-fluid rounded" alt="Digging"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo7.jpeg" class="gallery-item img-fluid rounded" alt="Field prep"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo8.jpeg" class="gallery-item img-fluid rounded" alt="Ready for seeds"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo9.jpeg" class="gallery-item img-fluid rounded" alt="Wide view"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Heating" class="img-fluid rounded gallery-item" alt="Process 2">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>Stage 2: Sowing & Germination</strong>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo10.jpeg" class="gallery-item img-fluid rounded" alt="First sprouts"><p class="caption">First Sprouts</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo11.jpeg" class="gallery-item img-fluid rounded" alt="Green rows"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo12.jpeg" class="gallery-item img-fluid rounded" alt="Young crop"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo13.jpeg" class="gallery-item img-fluid rounded" alt="Growth progress"><p class="caption">Taking Root</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo21.jpeg" class="gallery-item img-fluid rounded" alt="Field rows"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Pouring" class="img-fluid rounded gallery-item" alt="Process 3">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>Stage 3: Crop Growth</strong>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo15.jpeg" class="gallery-item img-fluid rounded" alt="Tall crops"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo18.jpeg" class="gallery-item img-fluid rounded" alt="Field view"><p class="caption">Maturing</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo19.jpeg" class="gallery-item img-fluid rounded" alt="Lush field"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo22.jpeg" class="gallery-item img-fluid rounded" alt="Greenery"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo23.jpeg" class="gallery-item img-fluid rounded" alt="Crop density"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo24.jpeg" class="gallery-item img-fluid rounded" alt="Field inspection"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Cooling" class="img-fluid rounded gallery-item" alt="Process 4">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <strong>Stage 4: The Harvest</strong>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo25.jpeg" class="gallery-item img-fluid rounded" alt="Shears"><p class="caption">The Right Tools</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo14.jpeg" class="gallery-item img-fluid rounded" alt="Harvesting team"><p class="caption">Harvest Day</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo16.jpeg" class="gallery-item img-fluid rounded" alt="Picking"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo20.jpeg" class="gallery-item img-fluid rounded" alt="Mature plant"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Labeling" class="img-fluid rounded gallery-item" alt="Process 5">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <strong>Stage 5: Processing & Drying</strong>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo30.jpeg" class="gallery-item img-fluid rounded" alt="Sun drying"><p class="caption">Sun Drying</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo31.jpeg" class="gallery-item img-fluid rounded" alt="Indoor drying"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo26.jpeg" class="gallery-item img-fluid rounded" alt="Threshed seeds"><p class="caption">Threshing</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo27.jpeg" class="gallery-item img-fluid rounded" alt="Processed crop"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-            <img src="https://placehold.co/600x600/png?text=Packing" class="img-fluid rounded gallery-item" alt="Process 6">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <strong>Stage 6: Ready for Market</strong>
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#processAccordion">
+                <div class="accordion-body">
+                    <div class="row g-2">
+                        <div class="col-4 col-md-3"><img src="assets/photo29.jpeg" class="gallery-item img-fluid rounded" alt="Product in bag"><p class="caption">Bagging</p></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo28.jpeg" class="gallery-item img-fluid rounded" alt="Sacks"></div>
+                        <div class="col-4 col-md-3"><img src="assets/photo17.jpeg" class="gallery-item img-fluid rounded" alt="Final Sack"><p class="caption">Ready to Go</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

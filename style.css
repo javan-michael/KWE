@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 #contact p, #contact h2 {
     color: #FDFBF7 !important;
 }
+
 /* Custom Accent Buttons */
 .btn-accent {
     background-color: var(--accent-color);
@@ -30,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn-accent:hover {
-    background-color: #A34300; /* Slightly darker orange for hover */
+    background-color: #A34300; 
     color: white;
 }
 
@@ -63,14 +64,14 @@ header {
     width: 100%;
     height: 150px; 
     object-fit: cover; 
-    border: 3px solid transparent; /* Prep for hover border */
+    border: 3px solid transparent; 
     border-radius: 8px;
 }
 
 .gallery-item:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border-color: var(--accent-color); /* Orange border on hover! */
+    border-color: var(--accent-color); 
 }
 
 /* Desktop sizing for gallery */

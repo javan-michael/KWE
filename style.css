@@ -12,10 +12,14 @@ body {
 }
 
 /* Update text colors across the board */
-h1, h2, h3, h4, h5, h6, .text-muted, p {
-    color: var(--text-color) !important;
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--text-color);
 }
 
+/* Force the contact footer text to be white */
+#contact p, #contact h2 {
+    color: #FDFBF7 !important;
+}
 /* Custom Accent Buttons */
 .btn-accent {
     background-color: var(--accent-color);

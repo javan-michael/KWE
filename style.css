@@ -1,30 +1,84 @@
+/* --- Native Oils Color Palette --- */
+:root {
+    --bg-color: #FDFBF7; /* Warm Cream / Off-White */
+    --text-color: #2F4F4F; /* Charcoal / Dark Slate */
+    --accent-color: #CC5500; /* Burnt Orange / Terracotta */
+}
+
 body {
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: var(--bg-color); 
+    color: var(--text-color);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Update text colors across the board */
+h1, h2, h3, h4, h5, h6, .text-muted, p {
+    color: var(--text-color) !important;
+}
+
+/* Custom Accent Buttons */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-accent:hover {
+    background-color: #A34300; /* Slightly darker orange for hover */
+    color: white;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--bg-color) !important;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+/* Accordion Styling (The Gallery) */
+.accordion-button {
+    background-color: #f4f1ea;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(204, 85, 0, 0.25);
+}
+
+/* Gallery Images */
 .gallery-item {
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, border-color 0.2s;
     width: 100%;
-    height: 150px; /* Force square-ish thumbnails on mobile */
-    object-fit: cover; /* Crops image nicely to fit the square */
+    height: 150px; 
+    object-fit: cover; 
+    border: 3px solid transparent; /* Prep for hover border */
+    border-radius: 8px;
 }
 
 .gallery-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-color: var(--accent-color); /* Orange border on hover! */
 }
 
-/* Make images larger on desktop screens */
+/* Desktop sizing for gallery */
 @media (min-width: 768px) {
     .gallery-item {
-        height: 300px;
+        height: 250px;
     }
     .caption {
-        font-size: 0.75rem;
-        color: #6c757d;
-        margin-top: 5px;
+        font-size: 0.85rem;
+        color: var(--text-color);
+        margin-top: 8px;
         text-align: center;
+        font-weight: bold;
     }
 }

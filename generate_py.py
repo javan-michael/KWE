@@ -1,24 +1,21 @@
 import qrcode
 import qrcode.image.svg
 
-# Your Link
-url = "https://1year.me"
+# Your Professional Domain
+url = "https://cellherbs.com"
 
-# Use the SVG Factory (No Pillow/Image libraries required)
 factory = qrcode.image.svg.SvgPathImage
 
-# Create the QR Code
 qr = qrcode.QRCode(
     version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_H,
+    error_correction=qrcode.constants.ERROR_CORRECT_H, # High error correction (best for bottles)
     box_size=10,
     border=4,
 )
 qr.add_data(url)
 qr.make(fit=True)
 
-# Generate and Save
 img = qr.make_image(image_factory=factory)
-img.save("Bottle_QR.svg")
+img.save("CellHerbs_QR.svg")
 
-print("Success! Bottle_QR.svg created. You can open this in any browser.")
+print("Success! 'CellHerbs_QR.svg' created. This is the one for the printer.")

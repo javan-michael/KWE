@@ -1,89 +1,183 @@
-/* --- Native Oils Color Palette --- */
+/* --- Native Oils Refined Design System --- */
 :root {
-    --bg-color: #FDFBF7; /* Warm Cream / Off-White */
-    --text-color: #2F4F4F; /* Charcoal / Dark Slate */
-    --accent-color: #CC5500; /* Burnt Orange / Terracotta */
+    --bg-color: #FDFBF7;       /* Warm Cream / Off-White */
+    --surface-color: #F5F2EB;  /* Slightly deeper neutral for section contrast */
+    --text-color: #1E3333;     /* Deep Slate / Near Black */
+    --text-muted: #5A6E6E;     /* Soft Slate */
+    --accent-color: #CC5500;   /* Burnt Orange / Terracotta */
+    --accent-hover: #A34300;
 }
 
 body {
-    background-color: var(--bg-color); 
+    background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-/* Update text colors across the board */
-h1, h2, h3, h4, h5, h6, p {
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
+    letter-spacing: -0.02em;
 }
 
-/* Force the contact footer text to be white */
-#contact p, #contact h2 {
-    color: #FDFBF7 !important;
+p {
+    color: var(--text-muted);
 }
 
-/* Custom Accent Buttons */
+.bg-surface {
+    background-color: var(--surface-color);
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.bg-accent-subtle {
+    background-color: rgba(204, 85, 0, 0.1) !important;
+}
+
+/* Navbar Polish */
+.navbar {
+    background-color: rgba(253, 251, 247, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: -0.03em;
+    color: var(--text-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Custom Buttons */
 .btn-accent {
     background-color: var(--accent-color);
-    color: white;
-    border: none;
-    font-weight: bold;
-    transition: background-color 0.2s;
+    color: #ffffff;
+    border: 2px solid var(--accent-color);
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-accent:hover {
-    background-color: #A34300; 
-    color: white;
+.btn-accent:hover, .btn-accent:focus {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(204, 85, 0, 0.25);
 }
 
-/* Header Styling */
-header {
-    background-color: var(--bg-color) !important;
-    border-bottom: 4px solid var(--accent-color);
+.btn-outline-accent {
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    font-weight: 600;
+    background: transparent;
+    transition: all 0.2s ease;
 }
 
-/* Accordion Styling (The Gallery) */
-.accordion-button {
-    background-color: #f4f1ea;
-    color: var(--text-color);
-    font-weight: bold;
-}
-
-.accordion-button:not(.collapsed) {
+.btn-outline-accent:hover {
     background-color: var(--accent-color);
-    color: white;
+    color: #ffffff;
 }
 
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(204, 85, 0, 0.25);
+/* Product Cards */
+.product-card {
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* Gallery Images */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08) !important;
+}
+
+/* Interactive Process Filter Pills */
+.nav-pills .nav-link {
+    background-color: #EAE6DE;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #DFDAD0;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(204, 85, 0, 0.25);
+}
+
+/* Gallery Cards & Hover Zoom */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #000;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
 .gallery-item {
     cursor: pointer;
-    transition: transform 0.2s, border-color 0.2s;
     width: 100%;
-    height: 150px; 
-    object-fit: cover; 
-    border: 3px solid transparent; 
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
-.gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border-color: var(--accent-color); 
+.gallery-card:hover .gallery-item {
+    transform: scale(1.08);
+    opacity: 0.85;
 }
 
-/* Desktop sizing for gallery */
-@media (min-width: 768px) {
-    .gallery-item {
-        height: 250px;
-    }
-    .caption {
-        font-size: 0.85rem;
-        color: var(--text-color);
-        margin-top: 8px;
-        text-align: center;
-        font-weight: bold;
-    }
+.caption {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: rgba(30, 51, 51, 0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #ffffff !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: calc(100% - 24px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .caption {
+    transform: translateY(-2px);
+}
+
+/* Lightbox Modal Polish */
+.modal-backdrop.show {
+    opacity: 0.85;
+    backdrop-filter: blur(5px);
 }

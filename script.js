@@ -1,19 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Get the modal element from the DOM
-    var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    // 1. Initialize Bootstrap Modal
+    const modalEl = document.getElementById('imageModal');
+    const myModal = new bootstrap.Modal(modalEl);
 
-    // 2. Select the image tag inside the modal
-    var modalImage = document.getElementById('modalImage');
+    // 2. Select DOM elements inside the modal
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
 
-    // 3. Add click event to all gallery images
-    var images = document.querySelectorAll('.gallery-item');
+    // 3. Attach click handlers to all gallery cards
+    const galleryCards = document.querySelectorAll('.gallery-card');
 
-    images.forEach(function (img) {
-        img.addEventListener('click', function () {
-            // Set the modal image source to the clicked image's source
-            modalImage.src = this.src;
-            // Show the modal
-            myModal.show();
+    galleryCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            const img = this.querySelector('.gallery-item');
+            const captionEl = this.querySelector('.caption');
+
+            if (img) {
+                // Pass image source to modal
+                modalImage.src = img.src;
+                modalImage.alt = img.alt || 'Gallery Preview';
+
+                // Pass caption text if it exists, otherwise clear it
+                if (captionEl) {
+                    modalCaption.textContent = captionEl.textContent;
+                    modalCaption.style.display = 'block';
+                } else {
+                    modalCaption.textContent = img.alt || '';
+                    modalCaption.style.display = img.alt ? 'block' : 'none';
+                }
+
+                // Trigger modal display
+                myModal.show();
+            }
         });
+    });
+
+    // 4. Clear image source on modal close to reset memory/view
+    modalEl.addEventListener('hidden.bs.modal', function () {
+        modalImage.src = '';
+        modalCaption.textContent = '';
     });
 });

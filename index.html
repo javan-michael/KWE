@@ -7,168 +7,208 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
-<header class="text-center py-5 shadow-sm">
-    <div class="container py-3">
-        <h1 class="display-3 fw-bold mb-3">Native Oils</h1>
-        <p class="lead" style="max-width: 600px; margin: 0 auto;">
-            Premium, handcrafted Chia Seed Oil. Grown sustainably on our family farm and pressed with care.
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Native Oils</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-medium">
+                <li class="nav-item"><a class="nav-link" href="#about">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">The Process</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-accent text-white px-4 ms-lg-3 rounded-pill" href="#contact">Partner With Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section text-center d-flex align-items-center">
+    <div class="container py-5 mt-5">
+        <span class="badge bg-accent-subtle text-accent px-3 py-2 rounded-pill fw-semibold mb-3">100% Sustainably Grown & Pressed</span>
+        <h1 class="display-3 fw-bolder mb-3 tracking-tight">Pure, Handcrafted<br>Chia Seed Oil</h1>
+        <p class="lead text-muted mx-auto mb-5" style="max-width: 650px;">
+            Cultivated on our family farm and cold-pressed with absolute care. We bridge natural wellness with meaningful community impact.
         </p>
-        <a href="#contact" class="btn btn-accent btn-lg mt-4 px-5 rounded-pill shadow-sm">Partner With Us</a>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#contact" class="btn btn-accent btn-lg px-5 rounded-pill shadow-sm">Partner With Us</a>
+            <a href="#process" class="btn btn-outline-dark btn-lg px-4 rounded-pill">Explore Our Process</a>
+        </div>
     </div>
 </header>
 
-<section class="py-5" style="background-color: rgba(204, 85, 0, 0.05);">
-    <div class="container text-center py-4">
-        <h2 class="fw-bold mb-4">Empowering Our Community</h2>
-        <p class="lead" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            Native Oils is more than just wellness; it’s a social movement. We cultivate our chia seeds right at our village home. By keeping the farming, harvesting, and distillation completely local, we provide meaningful employment and financial independence to the incredible women in our community who nurture these plants from soil to seed.
-        </p>
+<!-- Community Impact Section -->
+<section id="about" class="py-5 bg-surface">
+    <div class="container py-5">
+        <div class="row align-items-center justify-content-center g-5">
+            <div class="col-lg-8 text-center">
+                <h6 class="text-uppercase fw-bold text-accent mb-2">Social Movement</h6>
+                <h2 class="display-6 fw-bold mb-4">Empowering Our Community</h2>
+                <p class="lead text-muted mb-4" style="line-height: 1.8;">
+                    Native Oils is more than wellness; it is an engine for local empowerment. We cultivate our chia seeds right at our village home. By keeping farming, harvesting, and distillation strictly local, we provide sustainable employment and financial independence to the incredible women who nurture these plants from soil to seed.
+                </p>
+                <div class="d-flex justify-content-center gap-5 mt-4 pt-3 border-top">
+                    <div>
+                        <h3 class="fw-bold mb-0 text-dark">100%</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Local Processing</small>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 text-dark">Zero</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Chemical Refining</small>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 text-dark">Direct</h3>
+                        <small class="text-muted text-uppercase fw-semibold">Community Impact</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="py-5">
-    <div class="container text-center">
-        <h2 class="fw-bold mb-4">Our Products</h2>
-        <p class="mb-5 text-muted">Experience the natural benefits of pure chia oil, or explore our curated botanical infusions.</p>
-        
+<!-- Products Section -->
+<section id="products" class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold text-accent mb-2">Offerings</h6>
+            <h2 class="fw-bold display-6 mb-3">Our Products</h2>
+            <p class="text-muted mx-auto" style="max-width: 500px;">Experience the raw nutritional benefits of pure chia oil, or explore our curated botanical infusions.</p>
+        </div>
+
         <div class="row g-4 justify-content-center">
-            <div class="col-md-5">
-                <div class="p-5 border rounded shadow-sm h-100 bg-white" style="border-top: 5px solid var(--text-color) !important;">
-                    <h3 class="fw-bold mb-3">Pure Chia Oil</h3>
-                    <p>100% natural, unrefined, and packed with nutrients. Pressed entirely in-house to ensure maximum potency and quality.</p>
+            <div class="col-md-5 col-lg-5">
+                <div class="product-card p-5 rounded-4 shadow-sm h-100 bg-white d-flex flex-column justify-content-between">
+                    <div>
+                        <span class="badge bg-dark text-white rounded-pill mb-3 px-3 py-2">Flagship</span>
+                        <h3 class="fw-bold mb-3">Pure Chia Oil</h3>
+                        <p class="text-muted mb-4" style="line-height: 1.7;">100% natural, unrefined, and packed with Omega-3s and antioxidants. Cold-pressed entirely in-house to ensure maximum potency and uncompromising freshness.</p>
+                    </div>
+                    <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold text-dark">Bulk & Retail Available</span>
+                        <a href="#contact" class="btn btn-sm btn-outline-accent rounded-pill px-3">Inquire</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="p-5 border rounded shadow-sm h-100 bg-white" style="border-top: 5px solid var(--accent-color) !important;">
-                    <h3 class="fw-bold mb-3">Botanical Infusions</h3>
-                    <p>Our premium chia oil gently infused with natural scents to create a luxurious, calming sensory experience.</p>
+            <div class="col-md-5 col-lg-5">
+                <div class="product-card p-5 rounded-4 shadow-sm h-100 bg-white d-flex flex-column justify-content-between">
+                    <div>
+                        <span class="badge bg-accent-subtle text-accent rounded-pill mb-3 px-3 py-2">Aromatherapy</span>
+                        <h3 class="fw-bold mb-3">Botanical Infusions</h3>
+                        <p class="text-muted mb-4" style="line-height: 1.7;">Our premium unrefined chia oil gently infused with organic, locally sourced floral essential oils to create a luxurious, calming sensory experience for skin and hair.</p>
+                    </div>
+                    <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold text-dark">Custom Blends</span>
+                        <a href="#contact" class="btn btn-sm btn-outline-accent rounded-pill px-3">Inquire</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5" style="background-color: transparent;">
-    <div class="container my-4">
-        <h2 class="text-center fw-bold mb-2">From Soil to Sack</h2>
-        <p class="text-center mb-5">Tap a stage below to see exactly how we do it.</p>
+<!-- Interactive Process Gallery -->
+<section id="process" class="py-5 bg-surface">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold text-accent mb-2">Transparency</h6>
+            <h2 class="fw-bold display-6 mb-3">From Soil to Sack</h2>
+            <p class="text-muted mx-auto" style="max-width: 500px;">Select a stage below to explore our authentic, step-by-step agricultural journey.</p>
 
-        <div class="accordion shadow-sm" id="processAccordion">
+            <!-- Filter Tabs -->
+            <ul class="nav nav-pills justify-content-center gap-2 mt-4" id="processTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active rounded-pill px-4" id="stage1-tab" data-bs-toggle="pill" data-bs-target="#stage1" type="button" role="tab">1. Preparation</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4" id="stage2-tab" data-bs-toggle="pill" data-bs-target="#stage2" type="button" role="tab">2. Sowing</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4" id="stage3-tab" data-bs-toggle="pill" data-bs-target="#stage3" type="button" role="tab">3. Growth</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4" id="stage4-tab" data-bs-toggle="pill" data-bs-target="#stage4" type="button" role="tab">4. Harvest</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4" id="stage5-tab" data-bs-toggle="pill" data-bs-target="#stage5" type="button" role="tab">5. Processing</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4" id="stage6-tab" data-bs-toggle="pill" data-bs-target="#stage6" type="button" role="tab">6. Market</button>
+                </li>
+            </ul>
+        </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Stage 1: Land Preparation
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo1.jpeg" class="gallery-item img-fluid rounded" alt="Plowed field"><p class="caption">Breaking Ground</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo2.jpeg" class="gallery-item img-fluid rounded" alt="Soil prep"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo3.jpeg" class="gallery-item img-fluid rounded" alt="Field landscape"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo4.jpeg" class="gallery-item img-fluid rounded" alt="Red soil"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo5.jpeg" class="gallery-item img-fluid rounded" alt="Manual labor"><p class="caption">Teamwork</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo6.jpeg" class="gallery-item img-fluid rounded" alt="Digging"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo7.jpeg" class="gallery-item img-fluid rounded" alt="Field prep"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo8.jpeg" class="gallery-item img-fluid rounded" alt="Ready for seeds"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo9.jpeg" class="gallery-item img-fluid rounded" alt="Wide view"></div>
-                        </div>
-                    </div>
+        <!-- Tab Content / Gallery Grids -->
+        <div class="tab-content mt-4" id="processTabContent">
+
+            <!-- Stage 1 -->
+            <div class="tab-pane fade show active" id="stage1" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo1.jpeg" class="gallery-item img-fluid rounded-4" alt="Plowed field" loading="lazy"><span class="caption">Breaking Ground</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo2.jpeg" class="gallery-item img-fluid rounded-4" alt="Soil prep" loading="lazy"><span class="caption">Soil Conditioning</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo3.jpeg" class="gallery-item img-fluid rounded-4" alt="Field landscape" loading="lazy"><span class="caption">Field Landscape</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo4.jpeg" class="gallery-item img-fluid rounded-4" alt="Red soil" loading="lazy"><span class="caption">Nutrient-Rich Soil</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo5.jpeg" class="gallery-item img-fluid rounded-4" alt="Manual labor" loading="lazy"><span class="caption">Teamwork & Dedication</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo6.jpeg" class="gallery-item img-fluid rounded-4" alt="Digging" loading="lazy"><span class="caption">Manual Tilling</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo7.jpeg" class="gallery-item img-fluid rounded-4" alt="Field prep" loading="lazy"><span class="caption">Plot Alignment</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo8.jpeg" class="gallery-item img-fluid rounded-4" alt="Ready for seeds" loading="lazy"><span class="caption">Ready for Sowing</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo9.jpeg" class="gallery-item img-fluid rounded-4" alt="Wide view" loading="lazy"><span class="caption">Farm Panorama</span></div></div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Stage 2: Sowing & Germination
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo10.jpeg" class="gallery-item img-fluid rounded" alt="First sprouts"><p class="caption">First Sprouts</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo11.jpeg" class="gallery-item img-fluid rounded" alt="Green rows"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo12.jpeg" class="gallery-item img-fluid rounded" alt="Young crop"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo13.jpeg" class="gallery-item img-fluid rounded" alt="Growth progress"><p class="caption">Taking Root</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo21.jpeg" class="gallery-item img-fluid rounded" alt="Field rows"></div>
-                        </div>
-                    </div>
+            <!-- Stage 2 -->
+            <div class="tab-pane fade" id="stage2" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo10.jpeg" class="gallery-item img-fluid rounded-4" alt="First sprouts" loading="lazy"><span class="caption">First Sprouts</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo11.jpeg" class="gallery-item img-fluid rounded-4" alt="Green rows" loading="lazy"><span class="caption">Emerging Rows</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo12.jpeg" class="gallery-item img-fluid rounded-4" alt="Young crop" loading="lazy"><span class="caption">Early Crop Vitality</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo13.jpeg" class="gallery-item img-fluid rounded-4" alt="Growth progress" loading="lazy"><span class="caption">Taking Root</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo21.jpeg" class="gallery-item img-fluid rounded-4" alt="Field rows" loading="lazy"><span class="caption">Structured Cultivation</span></div></div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Stage 3: Crop Growth
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo15.jpeg" class="gallery-item img-fluid rounded" alt="Tall crops"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo18.jpeg" class="gallery-item img-fluid rounded" alt="Field view"><p class="caption">Maturing</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo19.jpeg" class="gallery-item img-fluid rounded" alt="Lush field"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo22.jpeg" class="gallery-item img-fluid rounded" alt="Greenery"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo23.jpeg" class="gallery-item img-fluid rounded" alt="Crop density"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo24.jpeg" class="gallery-item img-fluid rounded" alt="Field inspection"></div>
-                        </div>
-                    </div>
+            <!-- Stage 3 -->
+            <div class="tab-pane fade" id="stage3" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo15.jpeg" class="gallery-item img-fluid rounded-4" alt="Tall crops" loading="lazy"><span class="caption">Vertical Growth</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo18.jpeg" class="gallery-item img-fluid rounded-4" alt="Field view" loading="lazy"><span class="caption">Maturing Crop</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo19.jpeg" class="gallery-item img-fluid rounded-4" alt="Lush field" loading="lazy"><span class="caption">Lush Canopies</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo22.jpeg" class="gallery-item img-fluid rounded-4" alt="Greenery" loading="lazy"><span class="caption">Optimal Health</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo23.jpeg" class="gallery-item img-fluid rounded-4" alt="Crop density" loading="lazy"><span class="caption">High Seed Density</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo24.jpeg" class="gallery-item img-fluid rounded-4" alt="Field inspection" loading="lazy"><span class="caption">Quality Inspection</span></div></div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Stage 4: The Harvest
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo25.jpeg" class="gallery-item img-fluid rounded" alt="Shears"><p class="caption">The Right Tools</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo14.jpeg" class="gallery-item img-fluid rounded" alt="Harvesting team"><p class="caption">Harvest Day</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo16.jpeg" class="gallery-item img-fluid rounded" alt="Picking"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo20.jpeg" class="gallery-item img-fluid rounded" alt="Mature plant"></div>
-                        </div>
-                    </div>
+            <!-- Stage 4 -->
+            <div class="tab-pane fade" id="stage4" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo25.jpeg" class="gallery-item img-fluid rounded-4" alt="Shears" loading="lazy"><span class="caption">The Right Tools</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo14.jpeg" class="gallery-item img-fluid rounded-4" alt="Harvesting team" loading="lazy"><span class="caption">Harvest Day Team</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo16.jpeg" class="gallery-item img-fluid rounded-4" alt="Picking" loading="lazy"><span class="caption">Selective Picking</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo20.jpeg" class="gallery-item img-fluid rounded-4" alt="Mature plant" loading="lazy"><span class="caption">Peak Maturity</span></div></div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Stage 5: Processing & Drying
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo30.jpeg" class="gallery-item img-fluid rounded" alt="Sun drying"><p class="caption">Sun Drying</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo31.jpeg" class="gallery-item img-fluid rounded" alt="Indoor drying"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo26.jpeg" class="gallery-item img-fluid rounded" alt="Threshed seeds"><p class="caption">Threshing</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo27.jpeg" class="gallery-item img-fluid rounded" alt="Processed crop"></div>
-                        </div>
-                    </div>
+            <!-- Stage 5 -->
+            <div class="tab-pane fade" id="stage5" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo30.jpeg" class="gallery-item img-fluid rounded-4" alt="Sun drying" loading="lazy"><span class="caption">Natural Sun Drying</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo31.jpeg" class="gallery-item img-fluid rounded-4" alt="Indoor drying" loading="lazy"><span class="caption">Controlled Aeration</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo26.jpeg" class="gallery-item img-fluid rounded-4" alt="Threshed seeds" loading="lazy"><span class="caption">Seed Threshing</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="gallery-card"><img src="assets/photo27.jpeg" class="gallery-item img-fluid rounded-4" alt="Processed crop" loading="lazy"><span class="caption">Pure Harvest Ready</span></div></div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Stage 6: Ready for Market
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#processAccordion">
-                    <div class="accordion-body">
-                        <div class="row g-2">
-                            <div class="col-4 col-md-3"><img src="assets/photo29.jpeg" class="gallery-item img-fluid rounded" alt="Product in bag"><p class="caption">Bagging</p></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo28.jpeg" class="gallery-item img-fluid rounded" alt="Sacks"></div>
-                            <div class="col-4 col-md-3"><img src="assets/photo17.jpeg" class="gallery-item img-fluid rounded" alt="Final Sack"><p class="caption">Ready to Go</p></div>
-                        </div>
-                    </div>
+            <!-- Stage 6 -->
+            <div class="tab-pane fade" id="stage6" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo29.jpeg" class="gallery-item img-fluid rounded-4" alt="Product in bag" loading="lazy"><span class="caption">Hygienic Bagging</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo28.jpeg" class="gallery-item img-fluid rounded-4" alt="Sacks" loading="lazy"><span class="caption">Bulk Storage</span></div></div>
+                    <div class="col-6 col-md-4 col-lg-4"><div class="gallery-card"><img src="assets/photo17.jpeg" class="gallery-item img-fluid rounded-4" alt="Final Sack" loading="lazy"><span class="caption">Ready for Dispatch</span></div></div>
                 </div>
             </div>
 
@@ -176,26 +216,49 @@
     </div>
 </section>
 
-<section id="contact" class="py-5 text-white" style="background-color: var(--text-color);">
-    <div class="container text-center py-4">
-        <h2 class="fw-bold mb-4 text-white">Let's Build Something Great</h2>
-        <p class="mb-4 text-white-50">Interested in investing, stocking our products, or learning more? We'd love to connect.</p>
-        
-        <div class="mt-4">
-            <p class="mb-2 fs-5">📧 oils.native1@gmail.com</p>
-            <p class="fs-5">📞 +254 (0) 793 800 940</p>
-        </div>
-        
-        <p class="mt-5 mb-0 text-white-50"><small>&copy; 2026 Native Oils. All rights reserved.</small></p>
-    </div>
-</section>
+<!-- Contact & Footer -->
+<footer id="contact" class="py-5 bg-dark text-white">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center justify-content-between">
+            <div class="col-lg-6 text-center text-lg-start">
+                <span class="badge bg-accent text-white rounded-pill px-3 py-2 mb-3">Get in Touch</span>
+                <h2 class="display-6 fw-bold text-white mb-3">Let's Build Something Great</h2>
+                <p class="text-white-50 lead mb-4" style="max-width: 480px;">
+                    Whether you are an investor seeking impactful agribusiness opportunities or a distributor looking for premium chia oil, our team is ready to connect.
+                </p>
+                <div class="d-flex flex-column gap-2 fs-5">
+                    <div><strong class="text-accent me-2">Email:</strong> oils.native1@gmail.com</div>
+                    <div><strong class="text-accent me-2">Phone:</strong> +254 (0) 793 800 940</div>
+                </div>
+            </div>
 
+            <!-- Integrated QR Code -->
+            <div class="col-lg-4 text-center">
+                <div class="p-4 rounded-4 bg-white d-inline-block shadow-lg text-dark">
+                    <img src="CellHerbs_QR.svg" alt="Scan for Product Traceability" class="img-fluid mb-3" style="width: 160px; height: 160px;">
+                    <div class="fw-bold fs-6">Scan for Verification</div>
+                    <small class="text-muted d-block" style="font-size: 0.75rem;">Trace batch origin & lab specs</small>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 border-secondary">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white-50 small">
+            <p class="mb-2 mb-md-0">&copy; 2026 Native Oils. All rights reserved.</p>
+            <p class="mb-0">Sustainably cultivated with pride.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Lightbox Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-transparent border-0">
-            <div class="modal-body p-0 text-center">
-                <img src="" id="modalImage" class="img-fluid rounded shadow-lg">
-                <button type="button" class="btn btn-light mt-3 rounded-pill" data-bs-dismiss="modal">Close</button>
+            <div class="modal-body p-0 text-center position-relative">
+                <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 80vh; object-fit: contain; background: #000;">
+                <div id="modalCaption" class="text-white fw-bold mt-3 fs-5"></div>
+                <button type="button" class="btn btn-sm btn-outline-light rounded-pill mt-2 px-4" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
